@@ -40,14 +40,14 @@ h4 {
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
-    border: 2px solid transparent; /* Cadangan agar tidak geser */
+    border: 2px solid transparent; 
     transition: all 0.3s ease;
 }
 
 /* EFEK STROKE HITAM SAAT DIKLIK */
 .item-choice.terpilih {
     border: 2px solid black !important;
-    transform: scale(1.08); /* Sedikit membesar agar terlihat dipilih */
+    transform: scale(1.08); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -61,13 +61,14 @@ h4 {
 
 .preview-box {
     display: flex;
-    flex-direction: column; /* MEMBUAT GAMBAR MENUMPUK KE BAWAH */
-    align-items: center;    /* Rata tengah secara horizontal */
-    gap: 10px;              /* Jarak antar baju dan celana */
+    /* Tumpuk gambar */
+    flex-direction: column; 
+    align-items: center;    
+    gap: 10px;              
 }
 
 .preview-box img {
-    width: 200px;           /* Ukuran hasil gabungan lebih besar */
+    width: 200px;           
     height: auto;
     border-radius: 10px;
 }
@@ -82,7 +83,7 @@ h4 {
     cursor: pointer;
     font-weight: bold;
     display: block;
-    margin: 30px auto; /* Agar tombol berada di tengah */
+    margin: 30px auto; 
     transition: 0.2s;
 }
 
