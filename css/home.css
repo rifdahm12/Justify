@@ -3,11 +3,17 @@ body {
   font-family: Poppins;
 }
 
+.home-container {
+    max-width: 800px;  
+    padding: 0 20px;
+}
+
 /* Hero Section */
 .hero {
     background: url('../image/1.jpeg'); 
     background-size: cover;
     background-position: center;
+    width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
@@ -52,7 +58,7 @@ body {
 /* Info Cards (Visi & Misi) */
 .info-cards {
     display: flex;
-    flex-direction: column; /* Sesuai gambar kamu yang berjejer ke bawah */
+    flex-direction: column; 
     align-items: center;
     gap: 25px;
 }
@@ -72,7 +78,53 @@ body {
 }
 
 .card ul {
-    text-align: left; /* Teks list tetap rata kiri agar rapi */
+    text-align: left; 
     font-size: 0.9rem;
     line-height: 1.6;
+}
+
+.gallery-section {
+    max-width: 100%;
+    padding: 50px 0; 
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.swipe-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Container untuk Scroll */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; 
+    padding: 0 20px 20px 20px; 
+}
+
+/* Menghilangkan scrollbar di Chrome, Safari, dan Edge */
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    width: 25px; 
+    height: 35px; 
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.hero-image, .gallery-item, .card img {
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
 }
