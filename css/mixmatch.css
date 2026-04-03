@@ -10,11 +10,14 @@ body {
     margin: 0 auto;
 }
 
+h4 {
+    margin-bottom: 5px;
+}
 /* Card Panduan */
 .guide-card {
     background: #ffffff;
     border: 1px solid #e0e0e0;
-    border-radius: 12px;
+    border-radius: 15px;
     padding: 20px;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -23,6 +26,9 @@ body {
 /* Grid Pilihan Baju (Scroll ke samping) */
 .items-grid {
     display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    margin-bottom: 35px;
     gap: 15px;
     overflow-x: auto; 
     padding: 15px 5px;
