@@ -17,7 +17,49 @@
             <a href="mixmatch.html" class="active">Mix & Match</a>
         </div>
     </header>
-    <script src="script.js"></script>
+    <main class="mixmatch-container">
+    <div class="guide-card">
+        <h3>✨ Cara Pakai Mix & Match</h3>
+        <p>Ikuti langkah mudah ini untuk melihat gaya barumu:</p>
+        <ul>
+            <li>Klik satu gambar di bagian <strong>Atasan</strong>.</li>
+            <li>Klik satu gambar di bagian <strong>Bawahan</strong>.</li>
+            <li>Klik tombol <strong>Mix</strong> untuk menggabungkan!</li>
+        </ul>
+    </div>
+
+    <div id="result-display" class="result-area" style="display: none; text-align: center; margin-bottom: 30px;">
+        <h3 style="font-style: italic;">Your Style Concept:</h3>
+        <div id="combined-preview" class="preview-box" style="display: flex; justify-content: center; gap: 10px;">
+            </div>
+        <hr style="margin-top: 20px; border: 0.5px solid #eee;">
+    </div>
+
+    <section class="selection-section">
+        <h2>Atasan</h2>
+        <div class="items-grid">
+            <img src="../assets/baju1.png" class="item-choice atasan" onclick="pilihItem(this, 'atasan')">
+            <img src="../assets/baju2.png" class="item-choice atasan" onclick="pilihItem(this, 'atasan')">
+            <img src="../assets/baju3.png" class="item-choice atasan" onclick="pilihItem(this, 'atasan')">
+        </div>
+    </section>
+
+    <section class="selection-section">
+        <h2>Bawahan</h2>
+        <div class="items-grid">
+            <img src="../assets/celana1.png" class="item-choice bawahan" onclick="pilihItem(this, 'bawahan')">
+            <img src="../assets/celana2.png" class="item-choice bawahan" onclick="pilihItem(this, 'bawahan')">
+        </div>
+    </section>
+
+    <div class="action-area">
+        <button class="btn-mix" onclick="gabungkanStyle()">Mix</button>
+    </div>
+
+    </main>
+
+<script src="../script.js"></script>
+
 </body>
 
 </html>
