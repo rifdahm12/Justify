@@ -1,46 +1,37 @@
 body {
   margin: 0;
   font-family: Poppins;
-  background: #eee;
 }
 
-/* TITLE */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0;
+}
+
 .header {
-  width: 100%;
-  position: relative;
+  padding: 0px 20px;
+  text-align: center;
   font-size: 33px;
   line-height: 140%;
-  display: inline-block;
-  font-family: Poppins;
-  color: #000;
-  text-align: center;
 }
 
-/* FILTER */
 .filter {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-.dropdown {
-  position: relative;
-  width: fit-content;
-}
-
-/* SELECT */
 .dropdown select {
   border: 2px solid #aaa;
-  border-radius: 15px;
-  padding: 12px 40px 12px 15px;
-
-  font-size: 16px;
-  background-color: #eee;
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  font-size: 19px;
   cursor: pointer;
 }
 
-/* SIZE */
 .size-list {
   display: flex;
   gap: 10px;
@@ -53,40 +44,47 @@ body {
   padding: 10px 15px;
 }
 
-/* PRODUCTS GRID */
 .products {
-  padding: 20px;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
-  gap: 20px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px 55px;
 }
 
-/* CARD */
-.card {
-  background: #ddd;
-  padding: 10px;
-  border-radius: 20px;
 
+.card {
+  padding: 10px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
-  width: 100%;
-  border-radius: 15px;
+  width: 133px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* TEXT */
 .card h3 {
+  font-size: 11px;
   margin: 0;
 }
 
 .info {
   display: flex;
   justify-content: space-between;
-  color: gray;
+  font-size: 11px;
+  width: 100%;
+}
+
+.info span:first-child {
+  color: #737373;
+}
+
+.info span:last-child {
+  color: black;
 }

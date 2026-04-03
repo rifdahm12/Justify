@@ -1,91 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Savior World</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/catalog.css">
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"/>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/catalog.css" />
+  </head>
 
-<body>
-    <header>
+  <body>
+    <div class="main">
+      <header>
         <div class="TopNavbar">
-            <a href="home.html">Home</a>
-            <a href="catalog.html" class="active">Catalog</a>
-            <a href="mixmatch.html">Mix & Match</a>
+          <a href="home.html">Home</a>
+          <a href="catalog.html" class="active">Catalog</a>
+          <a href="mixmatch.html">Mix & Match</a>
         </div>
-    </header>
+      </header>
 
-   <section class="header">
-    <b>OUR<br>CATALOG</b>
-  </section>
+      <section class="header">
+        <b>OUR<br />CATALOG</b>
+      </section>
 
-  <!-- FILTER -->
-  <section class="filter">
-    <div class="dropdown">
-        <select name="kategori">
+      <!-- FILTER -->
+      <section class="filter">
+        <div class="dropdown">
+          <select name="kategori">
             <option value="celana">Celana</option>
             <option value="tshirt">T-shirt</option>
             <option value="longsleeve">LongSleeve</option>
-        </select>
+          </select>
+        </div>
 
-    </div>
+        <div class="size">
+          <p>Size</p>
+          <div class="size-list">
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+            <span>XL</span>
+            <span>XXL</span>
+          </div>
+        </div>
+      </section>
 
-    <div class="size">
-      <p>Size</p>
-      <div class="size-list">
-        <span>S</span>
-        <span>M</span>
-        <span>L</span>
-        <span>XL</span>
-        <span>XXL</span>
-      </div>
-    </div>
-  </section>
+      <!-- PRODUCT GRID -->
+      <section class="products">
+        <div class="card">
+          <img src="../image/4.jpeg" />
+          <h3>Nama Produk</h3>
+          <div class="info">
+            <span>Jenis</span>
+            <span>Harga</span>
+          </div>
+        </div>
 
-  <!-- PRODUCT GRID -->
-  <section class="products">
-    <div class="card">
-      <img src="https://via.placeholder.com/300" />
-      <h3>Nama Produk</h3>
-      <div class="info">
-        <span>Jenis</span>
-        <span>Harga</span>
-      </div>
-    </div>
+        <div class="card">
+          <img src="../image/3.jpeg" />
+          <h3>Nama Produk</h3>
+          <div class="info">
+            <span>Jenis</span>
+            <span>Harga</span>
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/300" />
-      <h3>Nama Produk</h3>
-      <div class="info">
-        <span>Jenis</span>
-        <span>Harga</span>
-      </div>
-    </div>
+        <div class="card">
+          <img src="../image/2.jpeg" />
+          <h3>Nama Produk</h3>
+          <div class="info">
+            <span>Jenis</span>
+            <span>Harga</span>
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/300" />
-      <h3>Nama Produk</h3>
-      <div class="info">
-        <span>Jenis</span>
-        <span>Harga</span>
-      </div>
+        <div class="card">
+          <img src="../image/1.jpeg" />
+          <h3>Nama Produk</h3>
+          <div class="info">
+            <span class="jenis">Jenis</span>
+            <span class="harga">Harga</span>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" />
-      <h3>Nama Produk</h3>
-      <div class="info">
-        <span>Jenis</span>
-        <span>Harga</span>
-      </div>
-    </div>
-  </section>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
