@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // VARIABEL UNTUK MENYIMPAN PILIHAN
 let pilihanAtasan = "";
 let pilihanBawahan = "";
@@ -52,10 +51,4 @@ function gabungkanStyle() {
     areaHasil.style.display = "block";
     
     // Scroll otomatis ke hasil agar user tidak bingung
-    areaHasil.scrollIntoView({ behavior: 'smooth' });
-=======
-function toggleMenu(){
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("active");
->>>>>>> e6a80537d83220edd5d3f77f3ae79bf4b91d5ff1
-}
+    areaHasil.scrollIntoView({ behavior: 'smooth' });}

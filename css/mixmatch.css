@@ -1,9 +1,13 @@
+body {
+  margin: 0;
+  font-family: Poppins;
+}
+
 /* Container Utama */
 .mixmatch-container {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    font-family: sans-serif;
 }
 
 /* Card Panduan */
