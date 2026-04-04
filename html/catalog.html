@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Savior World</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/catalog.css" />
   </head>
@@ -33,6 +36,7 @@
           </select>
         </div>
 
+        <!-- SIZE -->
         <div class="size">
           <p>Size</p>
           <div class="size-list">
@@ -45,7 +49,7 @@
         </div>
       </section>
 
-      <!-- PRODUCT GRID -->
+      <!-- PRODUCTS CARD -->
       <section class="products">
         <div class="card">
           <img src="../image/4.jpeg" />
@@ -85,6 +89,50 @@
       </section>
     </div>
 
-    <script src="script.js"></script>
+    <!-- PRODUCTS DETAILS -->
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <p>Product Details</p>
+          <span class="close" id="closeBtn">
+            <img src="../icon/close.svg" />
+          </span>
+        </div>
+
+        <div class="modal-content">
+          <img src="../image/4.jpeg" />
+
+          <h3>Nama Produk</h3>
+          <div class="info">
+            <span>Jenis</span>
+            <span>Harga</span>
+          </div>
+
+          <p><b>Available Sizes:</b></p>
+          <div class="size-details">
+            <span>S</span><span>M</span><span>L</span><span>XL</span>
+          </div>
+
+          <p><b>Available Colors:</b></p>
+          <div class="color-details">
+            <span>White</span><span>Black</span><span>Brown</span>
+          </div>
+
+          <p><b>Size Chart:</b></p>
+          <p class="size-chart">📏 <a href="#">Check here</a></p>
+
+          <p><b>Description</b></p>
+          <p>Deskripsi produk...</p>
+        </div>
+
+        <div class="modal-buy">
+          <button class="buy-btn">
+            <img src="../icon/buy.svg" alt="Shopee" /> Buy on Shopee
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../script.js"></script>
   </body>
 </html>
