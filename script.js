@@ -1,3 +1,29 @@
+// SCRIPT UNTUK NAVBAR
+// Untuk burger menu
+function toggleMenu(){
+    const backdrop = document.getElementById("backdrop");
+    const overlay = document.getElementById("overlay");
+    const icon = document.getElementById("burger");
+
+    backdrop.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    if (overlay.classList.contains("active")) {
+        icon.src = "../image/icon-close.svg";
+    }
+    else {
+        icon.src = "../image/icon-burger.svg";
+    }
+}
+
+// AUTO ACTIVE LINK NAVBAR
+const link = document.querySelectorAll(".menu-desktop a, .menu-overlay a");
+link.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+    }
+});
+
 // VARIABEL UNTUK MENYIMPAN PILIHAN
 let pilihanAtasan = "";
 let pilihanBawahan = "";

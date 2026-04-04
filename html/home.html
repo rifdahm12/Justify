@@ -17,19 +17,36 @@
                         <img src="../image/Logo-Putih-Savior-World.png" alt="Savior World Logo White">
                     </div>
 
-                    <div class="menu" id="menu">
+                    <!-- MENU MOBILE -->
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <img id="burger" src="../image/icon-burger.svg" alt="Open Menu">
+                    </div>
+
+                    <!-- MENU DESKTOP -->
+                    <div class="menu-desktop">
                         <a href="home.html">Home</a>
                         <a href="catalog.html">Catalog</a>
                         <a href="mixmatch.html">Mix & Match</a>
                     </div>
-                
-                    <div class="hamburger" onclick="toggleMenu()">
-                        ☰
-                    </div>
                 </div>
             </nav>
+
+            <!-- OVERLAY MENU MOBILE -->
+            <div class="backdrop" id="backdrop" onclick="toggleMenu()"></div> <!-- Biar background gelap saat buka overlay -->
+            <div class="overlay" id="overlay">
+                <div class="close" onclick="toggleMenu()">
+                    <img src="../image/icon-close.svg" alt="Close Menu">
+                </div>
+
+                <div class="menu-overlay">
+                    <a href="home.html">Home</a>
+                    <a href="catalog.html">Catalog</a>
+                    <a href="mixmatch.html">Mix & Match</a>
+                </div>
+            </div>
         </header>
 
+        <!-- ISI HOME -->
         <main class="home-container">
             <section class="hero">
                 <div class="hero-content">
@@ -72,5 +89,7 @@
                     <img src="../image/4.jpeg" alt="Gallery Image 4">
                 </div>
             </section>
+        </main>
+        <script src="../script.js"></script>
     </body>
 </html>

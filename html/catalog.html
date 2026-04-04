@@ -10,17 +10,45 @@
   </head>
 
   <body>
-    <div class="main">
-      <header>
-        <div class="TopNavbar">
-          <a href="home.html">Home</a>
-          <a href="catalog.html" class="active">Catalog</a>
-          <a href="mixmatch.html">Mix & Match</a>
-        </div>
-      </header>
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <img src="../image/Logo-Putih-Savior-World.png" alt="Savior World Logo White">
+                    </div>
 
-      <section class="header">
-        <b>OUR<br />CATALOG</b>
+                    <!-- MENU MOBILE -->
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <img id="burger" src="../image/icon-burger.svg" alt="Open Menu">
+                    </div>
+
+                    <!-- MENU DESKTOP -->
+                    <div class="menu-desktop">
+                        <a href="home.html">Home</a>
+                        <a href="catalog.html">Catalog</a>
+                        <a href="mixmatch.html">Mix & Match</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- OVERLAY MENU MOBILE -->
+            <div class="backdrop" id="backdrop" onclick="toggleMenu()"></div> <!-- Biar background gelap saat buka overlay -->
+            <div class="overlay" id="overlay">
+                <div class="close" onclick="toggleMenu()">
+                    <img src="../image/icon-close.svg" alt="Close Menu">
+                </div>
+
+                <div class="menu-overlay">
+                    <a href="home.html">Home</a>
+                    <a href="catalog.html">Catalog</a>
+                    <a href="mixmatch.html">Mix & Match</a>
+                </div>
+            </div>
+        </header>
+
+    <main>
+      <section class="title">
+        <b>OUR<br>CATALOG</b>
       </section>
 
       <!-- FILTER -->
@@ -77,14 +105,14 @@
         <div class="card">
           <img src="../image/1.jpeg" />
           <h3>Nama Produk</h3>
-          <div class="info">
+            <div class="info">
             <span class="jenis">Jenis</span>
             <span class="harga">Harga</span>
           </div>
         </div>
       </section>
-    </div>
+    </main>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
