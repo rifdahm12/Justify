@@ -1,4 +1,4 @@
-// SCRIPT UNTUK NAVBAR
+// NAVBAR
 // Untuk burger menu
 function toggleMenu(){
     const backdrop = document.getElementById("backdrop");
@@ -24,17 +24,9 @@ link.forEach(link => {
     }
 });
 
-// VARIABEL UNTUK MENYIMPAN PILIHAN
-let pilihanAtasan = "";
-let pilihanBawahan = "";
-
-// 1. FUNGSI LOAD FOOTER (Agar muncul di semua halaman)
-fetch("footer.html")
-  .then((res) => res.text())
-  .then((data) => {
-    const placeholder = document.getElementById("footer-placeholder");
-    if (placeholder) placeholder.innerHTML = data;
-  });
+// mixmatch
+let pilihanatasan = "";
+let pilihanbawahan = "";
 
 // 2. FUNGSI MEMILIH GAMBAR
 function pilihItem(elemen, kategori) {
@@ -52,15 +44,15 @@ function pilihItem(elemen, kategori) {
 
   // 4. Simpan alamat gambarnya untuk proses Mix nanti
   if (kategori === "atasan") {
-    pilihanAtasan = elemen.src;
+    pilihanatasan = elemen.src;
   } else {
-    pilihanBawahan = elemen.src;
+    pilihanbawahan = elemen.src;
   }
 }
 
 // 3. FUNGSI GABUNGKAN (TOMBOL MIX)
 function gabungkanStyle() {
-  if (pilihanAtasan === "" || pilihanBawahan === "") {
+  if (pilihanatasan === "" || pilihanbawahan === "") {
     alert("Pilih dulu atasan dan bawahannya!");
     return;
   }
@@ -70,8 +62,8 @@ function gabungkanStyle() {
 
   // Masukkan gambar ke dalam kotak yang sudah di-setting vertikal di CSS
   kotakGambar.innerHTML = `
-        <img src="${pilihanAtasan}" alt="Atasan Terpilih">
-        <img src="${pilihanBawahan}" alt="Bawahan Terpilih">
+        <img src="${pilihanatasan}" alt="Atasan Terpilih">
+        <img src="${pilihanbawahan}" alt="Bawahan Terpilih">
     `;
 
   areaHasil.style.display = "block";
