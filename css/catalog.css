@@ -101,7 +101,7 @@
 .modal {
   background: #fff;
   max-width: 366px;
-  max-height: 90vh;
+  max-height: 80vh;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -183,7 +183,6 @@
   color: white;
   border-radius: 8px;
   font-size: 11px;
-
   display: flex;
   align-items: center;
   justify-content: center;
