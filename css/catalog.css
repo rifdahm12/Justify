@@ -7,18 +7,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 25px 20px;
+  padding: 20px 0;
 }
 
 .title {
-  padding: 0;
+  padding: 20px 20px;
   text-align: center;
   font-size: 33px;
   line-height: 140%;
 }
 
 .filter {
-  padding: 0;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -32,15 +32,20 @@ body {
   cursor: pointer;
 }
 
+.size{
+  display:flex;
+  flex-direction:column;
+}
+
 .size-list {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .size-list span {
   border: 2px solid #aaa;
-  border-radius: 40px;
+  border-radius: 25px;
   padding: 10px 15px;
 }
 
@@ -48,16 +53,11 @@ body {
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
+  gap: 30px;
 }
 
-
-
 .card {
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@ body {
 }
 
 .card img {
-  width: 145px;
+  width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
@@ -92,7 +92,6 @@ body {
 .info span:last-child {
   color: black;
 }
-
 /* OVERLAY */
 .overlay-details {
   position: fixed;
@@ -106,7 +105,6 @@ body {
   align-items: center;
 }
 
-/* MODAL */
 .modal {
   background: #fff;
   max-width: 366px;
@@ -116,7 +114,6 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -132,7 +129,7 @@ body {
   cursor: pointer;
 }
 
-/* CONTENT (SCROLLABLE) */
+/* SCROLLL */
 .modal-content {
   padding: 16px;
   overflow-y: auto;
@@ -147,7 +144,7 @@ body {
 .size-details {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* biar turun kalau kepenuhan */
+  flex-wrap: wrap; 
 }
 
 .size-details span {
@@ -159,7 +156,7 @@ body {
 .color-details {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* biar turun kalau kepenuhan */
+  flex-wrap: wrap; 
 }
 
 .color-details span {
@@ -168,17 +165,37 @@ body {
   padding: 10px 10px;
 }
 
-.size-chart {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.size-chart-table{
+  margin-top:10px;
 }
 
-.size-chart a {
-  color: #3b3bff;
-  font-size: 11px;
+.chart-title{
+  background:#666;
+  color:white;
+  text-align:center;
+  padding:10px;
+  font-size:12px;
 }
 
+.size-chart-table table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.size-chart-table th{
+  background:black;
+  color:white;
+  font-size:12px;
+  padding:8px;
+}
+
+.size-chart-table td{
+  border:2px solid black;
+  text-align:center;
+  padding:8px;
+  font-size:12px;
+  background:#bfbfbf;
+}
 
 .modal-buy {
   padding: 15px;
@@ -201,4 +218,42 @@ body {
 .buy-btn img {
   width: 16px;
   height: 16px;
+}
+
+.product-detail{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.product-image img{
+  width:100%;
+  border-radius:8px;
+}
+
+.product-info{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+@media (min-width:768px){
+
+  .modal{
+    max-width:900px;
+  }
+
+  .product-detail{
+    flex-direction:row;
+    gap:30px;
+  }
+
+  .product-image{
+    flex:1;
+  }
+
+  .product-info{
+    flex:1;
+  }
+
 }

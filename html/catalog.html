@@ -13,45 +13,53 @@
   </head>
 
   <body>
-        <header>
-            <nav class="navbar">
-                <div class="nav-container">
-                    <div class="logo">
-                        <img src="../image/Logo-Putih-Savior-World.png" alt="Savior World Logo White">
-                    </div>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <img
+              src="../image/Logo-Putih-Savior-World.png"
+              alt="Savior World Logo White"
+            />
+          </div>
 
-                    <!-- MENU MOBILE -->
-                    <div class="hamburger" onclick="toggleMenu()">
-                        <img id="burger" src="../image/icon/icon-burger.svg" alt="Open Menu">
-                    </div>
+          <!-- MENU MOBILE -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <img
+              id="burger"
+              src="../image/icon/icon-burger.svg"
+              alt="Open Menu"
+            />
+          </div>
 
-                    <!-- MENU DESKTOP -->
-                    <div class="menu-desktop">
-                        <a href="home.html">Home</a>
-                        <a href="catalog.html">Catalog</a>
-                        <a href="mixmatch.html">Mix & Match</a>
-                    </div>
-                </div>
-            </nav>
+          <!-- MENU DESKTOP -->
+          <div class="menu-desktop">
+            <a href="home.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="mixmatch.html">Mix & Match</a>
+          </div>
+        </div>
+      </nav>
 
-            <!-- OVERLAY MENU MOBILE -->
-            <div class="backdrop" id="backdrop" onclick="toggleMenu()"></div> <!-- Biar background gelap saat buka overlay -->
-            <div class="overlay" id="overlay">
-                <div class="close" onclick="toggleMenu()">
-                    <img src="../image/icon/icon-close-putih.svg" alt="Close Menu">
-                </div>
+      <!-- OVERLAY MENU MOBILE -->
+      <div class="backdrop" id="backdrop" onclick="toggleMenu()"></div>
+      <!-- Biar background gelap saat buka overlay -->
+      <div class="overlay" id="overlay">
+        <div class="close" onclick="toggleMenu()">
+          <img src="../image/icon/icon-close-putih.svg" alt="Close Menu" />
+        </div>
 
-                <div class="menu-overlay">
-                    <a href="home.html">Home</a>
-                    <a href="catalog.html">Catalog</a>
-                    <a href="mixmatch.html">Mix & Match</a>
-                </div>
-            </div>
-        </header>
+        <div class="menu-overlay">
+          <a href="home.html">Home</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="mixmatch.html">Mix & Match</a>
+        </div>
+      </div>
+    </header>
 
     <main>
       <section class="title">
-        <b>OUR<br>CATALOG</b>
+        <b>OUR<br />CATALOG</b>
       </section>
 
       <!-- FILTER -->
@@ -109,7 +117,7 @@
         <div class="card">
           <img src="../image/Foto/Baju-hitam-depan.jpg" />
           <h3>Nama Produk</h3>
-            <div class="info">
+          <div class="info">
             <span class="jenis">Jenis</span>
             <span class="harga">Harga</span>
           </div>
@@ -128,29 +136,72 @@
         </div>
 
         <div class="modal-content">
-          <img src="../image/Foto/Baju-coklat-belakang.jpg" />
+          <div class="product-detail">
+            <div class="product-image">
+              <img src="../image/Foto/Baju-coklat-belakang.jpg" />
+            </div>
 
-          <h3>Nama Produk</h3>
-          <div class="info">
-            <span>Jenis</span>
-            <span>Harga</span>
+            <div class="product-info">
+              <h3>Nama Produk</h3>
+
+              <div class="info">
+                <span>Jenis</span>
+                <span>Harga</span>
+              </div>
+
+              <p><b>Available Sizes:</b></p>
+              <div class="size-details">
+                <span>S</span><span>M</span><span>L</span><span>XL</span>
+              </div>
+
+              <p><b>Available Colors:</b></p>
+              <div class="color-details">
+                <span>White</span><span>Black</span><span>Brown</span>
+              </div>
+
+              <p><b>Size Chart:</b></p>
+
+              <div class="size-chart-table">
+                <div class="chart-title">
+                  Jenis size: Tinggi dan besar, Reguler<br />
+                  Ukuran tubuh
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Size</th>
+                      <th>Tinggi (cm)</th>
+                      <th>Lebar bahu (cm)</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>M</td>
+                      <td>68</td>
+                      <td>44</td>
+                    </tr>
+
+                    <tr>
+                      <td>L</td>
+                      <td>72</td>
+                      <td>46</td>
+                    </tr>
+
+                    <tr>
+                      <td>XL</td>
+                      <td>74</td>
+                      <td>48</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p><b>Description</b></p>
+              <p>Deskripsi produk...</p>
+            </div>
           </div>
-
-          <p><b>Available Sizes:</b></p>
-          <div class="size-details">
-            <span>S</span><span>M</span><span>L</span><span>XL</span>
-          </div>
-
-          <p><b>Available Colors:</b></p>
-          <div class="color-details">
-            <span>White</span><span>Black</span><span>Brown</span>
-          </div>
-
-          <p><b>Size Chart:</b></p>
-          <p class="size-chart">📏 <a href="#">Check here</a></p>
-
-          <p><b>Description</b></p>
-          <p>Deskripsi produk...</p>
         </div>
 
         <div class="modal-buy">
