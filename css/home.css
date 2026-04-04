@@ -172,6 +172,10 @@
         font-size: 28px;
     }
 
+    .gallery p{
+        display: none;
+    }
+
     .gallery-container{
         justify-content: center;
     }
