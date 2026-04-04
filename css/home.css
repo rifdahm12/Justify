@@ -1,107 +1,96 @@
-.home-container {
-    max-width: 800px;  
-    padding: 0 20px;
-}
-
 /* Hero Section */
-.hero {
-    background: url('../image/1.jpeg'); 
-    background-size: cover;
-    background-position: center;
+.hero{
+    position: relative;
     width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+}
+
+.hero img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.hero-text h1{
     color: white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.btn-start {
-    background-color: white;
-    color: black;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.btn-start:hover {
-    transform: translateY(-3px);
+.hero-button{
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: white;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 /* About Section */
-.about-section {
-    padding: 50px 20px;
+.about{
+    margin-top: 50px;
+    padding: 0px 20px;
     text-align: center;
 }
 
-.section-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
+.about h2{
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 /* Info Cards (Visi & Misi) */
-.info-cards {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    gap: 25px;
-}
-
-.card {
+.card{
     border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 20px 40px;
-    width: 100%;
-    max-width: 500px;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.card h3{
+    margin-bottom: 10px;
     text-align: center;
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    font-weight: bold;
+.card ul{
+    padding-left: 16px; 
+    font-size: 13px;
 }
 
-.card ul {
-    text-align: left; 
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.gallery-section {
-    max-width: 100%;
-    padding: 50px 0; 
+/* Gallery Section */
+.gallery{
+    margin-top: 40px;
+    padding: 0 20px; 
     text-align: center;
 }
 
-.gallery-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+.gallery h2{
+    font-size: 18px;
 }
 
-.swipe-text {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 25px;
+.gallery p{
+    font-size: 12px;
+    margin-bottom: 16px;
 }
 
 /* Container untuk Scroll */
-.gallery-container {
+.gallery-container{
     display: flex;
     gap: 20px;
     overflow-x: auto; 
-    padding: 0 20px 20px 20px; 
 }
 
 /* Menghilangkan scrollbar di Chrome, Safari, dan Edge */
@@ -109,17 +98,7 @@
     display: none;
 }
 
-.gallery-item {
-    width: 25px; 
-    height: 35px; 
-    flex-shrink: 0;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.hero-image, .gallery-item, .card img {
-    max-width: 100%; 
-    height: auto; 
-    display: block;
-    margin: 0 auto;
+.gallery-container img{
+    width: 120px; 
+    border-radius: 12px;
 }
