@@ -72,7 +72,7 @@ function gabungkanStyle() {
   areaHasil.scrollIntoView({ behavior: "smooth" });
 }
 
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".products .card");
 const details = document.getElementById("overlay-details");
 const closeBtn = document.getElementById("closeBtn");
 
@@ -88,9 +88,12 @@ closeBtn.addEventListener("click", () => {
   details.style.display = "none";
 });
 
-// optional: klik luar modal buat close
-details.addEventListener("click", (e) => {
-  if (e.target === details) {
-    details.style.display = "none";
-  }
+// biar pas dipilih active
+const sizes = document.querySelectorAll(".size-list span");
+
+sizes.forEach((size) => {
+  size.addEventListener("click", () => {
+    sizes.forEach(s => s.classList.remove("active"));
+    size.classList.add("active");
+  });
 });
