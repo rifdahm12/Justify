@@ -9,7 +9,7 @@ function toggleMenu(){
     overlay.classList.toggle("active");
 
     if (overlay.classList.contains("active")) {
-        icon.src = "../image/icon-close.svg";
+        icon.src = "../image/icon-close-putih.svg";
     }
     else {
         icon.src = "../image/icon-burger.svg";
