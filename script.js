@@ -81,24 +81,24 @@ function gabungkanStyle() {
 }
 
 const cards = document.querySelectorAll(".card");
-const overlay = document.getElementById("overlay");
+const details = document.getElementById("overlay-details");
 const closeBtn = document.getElementById("closeBtn");
 
 // buka modal
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    overlay.style.display = "flex";
+    details.style.display = "flex";
   });
 });
 
 // tutup modal (klik X)
 closeBtn.addEventListener("click", () => {
-  overlay.style.display = "none";
+  details.style.display = "none";
 });
 
 // optional: klik luar modal buat close
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) {
-    overlay.style.display = "none";
+details.addEventListener("click", (e) => {
+  if (e.target === details) {
+    details.style.display = "none";
   }
 });
