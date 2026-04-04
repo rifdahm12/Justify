@@ -2,27 +2,40 @@
 .hero{
     position: relative;
     width: 100%;
-    overflow: hidden;
+    margin-top: -80px;
+    padding-top: 62px;
+    z-index: 2;
 }
 
 .hero img{
+    display: block;
     width: 100%;
+    height: auto;
     object-fit: cover;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-text{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 90%;
+    z-index: 2;
 }
 
 .hero-text h1{
     color: white;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1;
 }
 
 .hero-button{
@@ -35,13 +48,19 @@
     border: none;
     background: white;
     font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
     cursor: pointer;
+}
+
+.hero-button a{
+    color: black;
+    text-decoration: none;
 }
 
 /* About Section */
 .about{
-    margin-top: 50px;
+    margin-top: 80px;
     padding: 0px 20px;
     text-align: center;
 }
@@ -55,7 +74,7 @@
 .card{
     border: 1px solid #ccc;
     border-radius: 12px;
-    padding: 16px;
+    padding: 14px 16px;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -72,7 +91,7 @@
 
 /* Gallery Section */
 .gallery{
-    margin-top: 40px;
+    margin: 40px 0;
     padding: 0 20px; 
     text-align: center;
 }
@@ -91,6 +110,7 @@
     display: flex;
     gap: 20px;
     overflow-x: auto; 
+    justify-content: flex-start;
 }
 
 /* Menghilangkan scrollbar di Chrome, Safari, dan Edge */
@@ -101,4 +121,58 @@
 .gallery-container img{
     width: 120px; 
     border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+    .hero{
+        max-width: 1200px;
+        margin: -80px auto 0;
+    }
+
+    .hero img{
+        height: 500px;
+        object-fit: cover;
+    }
+    .hero-text h1{
+        font-size: 52px;
+    }
+
+    .hero-button{
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .about{
+        max-width: 900px;
+        margin: 100px auto;
+    }
+
+    .about h2{
+        font-size: 28px;
+    }
+
+    .card{
+        padding: 20px;
+    }
+
+    .card h3{
+        font-size: 20px;
+    }
+
+    .card ul{
+        font-size: 15px;
+    }
+
+    .gallery{
+        max-width: 1000px;
+        margin: 80px auto;
+    }
+
+    .gallery-container{
+        justify-content: center;
+    }
+
+    .gallery-container img{
+        width: 200px;
+    }
 }

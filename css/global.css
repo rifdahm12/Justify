@@ -123,7 +123,7 @@ main{
 @media (min-width: 768px) {
     .menu-desktop{
         display: flex;
-        align-items: center;
+        align-items: center; 
     }
 
     .hamburger{
