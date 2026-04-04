@@ -17,19 +17,36 @@
                         <img src="../image/Logo-Putih-Savior-World.png" alt="Savior World Logo White">
                     </div>
 
-                    <div class="menu" id="menu">
+                    <!-- MENU MOBILE -->
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <img id="burger" src="../image/icon-burger.svg" alt="Open Menu">
+                    </div>
+
+                    <!-- MENU DESKTOP -->
+                    <div class="menu-desktop">
                         <a href="home.html">Home</a>
                         <a href="catalog.html">Catalog</a>
                         <a href="mixmatch.html">Mix & Match</a>
                     </div>
-                
-                    <div class="hamburger" onclick="toggleMenu()">
-                        ☰
-                    </div>
                 </div>
             </nav>
+
+            <!-- OVERLAY MENU MOBILE -->
+            <div class="backdrop" id="backdrop" onclick="toggleMenu()"></div> <!-- Biar background gelap saat buka overlay -->
+            <div class="overlay" id="overlay">
+                <div class="close" onclick="toggleMenu()">
+                    <img src="../image/icon-close.svg" alt="Close Menu">
+                </div>
+
+                <div class="menu-overlay">
+                    <a href="home.html">Home</a>
+                    <a href="catalog.html">Catalog</a>
+                    <a href="mixmatch.html">Mix & Match</a>
+                </div>
+            </div>
         </header>
 
+        <!-- ISI HOME -->
         <main class="home-container">
             <section class="hero">
                 <div class="hero-content">
@@ -66,11 +83,12 @@
                 <h2 class="gallery-title">OUR GALLERY</h2>
                 <p class="swipe-text">Swipe here</p>
                 <div class="gallery-container">
-                    <img src="../image/1.jpeg" alt="Gallery Image 1">
-                    <img src="../image/2.jpeg" alt="Gallery Image 2">
-                    <img src="../image/3.jpeg" alt="Gallery Image 3">
-                    <img src="../image/4.jpeg" alt="Gallery Image 4">
+                    <img src="../image/foto/Gambar-cewe-depan-bajucoklat.jpg" alt="Gallery gambar bagian depan">
+                    <img src="../image/foto/Gambar-cewe-belakang-bajucoklat.jpg" alt="Gallery gambar bagian belakang">
+                    <img src="../image/foto/Gambar-cewe-samping-bajucoklat.jpg" alt="Gallery gambar bagian samping">
                 </div>
             </section>
+        </main>
+        <script src="../script.js"></script>
     </body>
 </html>

@@ -1,7 +1,141 @@
+/* TAMPILAN MOBILE (DEFAULT) */
 body{
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.Navbar{
-    background-color: black;
+/* STYLE NAVBAR */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 12px 0;
+    z-index: 1000;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* LOGO NAVBAR */
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 40px;
+    display: block;
+}
+
+/* HAMBURGER NAVBAR */
+.hamburger img{
+    width: 24px;
+    cursor: pointer;
+    display: block;
+}
+
+/* MENU DESKTOP */
+.menu-desktop{
+    display: none; /* hidden di tampilan mobile */
+}
+
+.menu-desktop a{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+.menu-desktop a.active{
+    font-weight: 700;
+}
+
+/* BACKDROP OVERLAY */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 998;
+}
+
+.backdrop.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* OVERLAY MENU MOBILE */
+.overlay{
+    position: fixed;
+    top: -50%;
+    width: 100%;
+    background: black;
+    z-index: 999;
+    padding: 20px 0;
+}
+
+.overlay.active{
+    top: 0;
+}
+
+.close{
+    text-align: right;
+    cursor: pointer;
+}
+
+.close img{
+    width: 24px;
+}
+
+/* MENU OVERLAY */
+.menu-overlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.menu-overlay a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+main{
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* TAMPILAN DESKTOP */
+@media (min-width: 768px) {
+    .menu-desktop{
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .backdrop{
+        display: none;
+    }
+
+    .overlay{
+        display: none;
+    }
 }
