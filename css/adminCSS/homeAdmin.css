@@ -1,0 +1,115 @@
+/* Layout dasar */
+.admin-layout {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+}
+
+/* Sidebar kak */
+.sidebar {
+    width:280px;
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.admin-logo {
+    width: 120px;
+}
+
+.nav-menu a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.nav-menu a.active {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+}
+
+.nav-divider {
+    border: 0.5px solid #444;
+    margin: 20px 0;
+}
+
+/* CONTENT AREA */
+.content-area {
+    margin-left: 280px; /* Jarak agar tidak tertutup sidebar */
+    flex: 1;
+    padding: 40px 60px;
+}
+
+/* Top Header Profile */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.admin-name {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.admin-role {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* MANAGE CARD */
+.manage-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.vertical-line {
+    width: 4px;
+    height: 30px;
+    background-color: #000;
+}
+
+.instruction {
+    color: #666;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
