@@ -10,49 +10,82 @@
   </head>
 
   <body>
-    <div class="admin-layout">
-    <aside class="sidebar">
-        <div class="logo-container">
-            <img src="../../image/logo-white.png" alt="Savior World" class="admin-logo">
-        </div>
-        <nav class="nav-menu">
-            <a href=".htm">Profile</a>
-            <a href=".htm">Dashboard</a>
-            <a href="homeAdmin.htm" class="active">Manage Home</a>
-            <a href="catalogAdmin.html">Manage Katalog</a>
-            <a href="mixmatchAdmin.html">Manage Mixmatch</a>
-            <hr class="nav-divider">
-            <a href="../home.html" class="logout-btn">Keluar</a>
-        </nav>
-    </aside>
+    <header class="header-mobile">
+      <!-- MENU MOBILE -->
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <img id="burger" src="../../image/icon/icon-burger.svg" alt="Open Menu">
+                    </div>
 
-    <main class="content-area">
-        <header class="top-header">
-            <h1 class="page-title">HOME</h1>
-            <div class="admin-profile">
-                <img src="../../image/foto/Gambar-cewe-belakang-bajucoklat.jpg" alt="Admin" class="avatar">
-                <div class="profile-info">
-                    <span class="admin-name">KARINA FAUZIA SETIADI</span>
-                    <span class="admin-role">Penyelenggara Dunia</span>
+    </header>
+
+    <div class="isi-utama">
+        <div class="header-karina">
+            <h4>HOME</h4>
+            <div class="profil-box">
+                <img src="../../image/foto/Gambar-cewe-depan-bajucoklat.jpg" alt="Karina">
+                <div class="tulisan-profil">
+                    <span class="nama-hitam">KARINA FAUZIA SETIADI</span>
+                    <span class="sub-nama">Penyelenggara Dunia</span>
                 </div>
             </div>
-        </header>
+        </div>
 
-        <section class="manage-card">
-          <div class="card-header">
-            <div class="vertical-line"></div>
-            <h5>Hero Banner</h5>
-          </div>
-          <h5 class="intruction">Rekomendasi foto yang disarankan beresolusi tinggi</h5>
-    
-          <div class="upload-banner">
-            <input type="file" id="banner-upload">
-            <label for="banner-upload" class="upload-btn">
-              <div class="upload-icon">
+        <div class="kotak-putih">
+            <div class="judul-kartu">
+                <div class="garis-tegak"></div>
+                <h2>Hero Banner</h2>
+            </div>
+            <p class="teks-kecil">Rekomendasi foto yang disarankan beresolusi tinggi</p>
+
+            <div class="area-upload">
+                <div class="icon-awan">☁️</div>
                 <p>Klik disini untuk upload foto hero banner</p>
-              </div>
-          </div>
-        </section>
+            </div>
+        </div>
+<div class="kotak-putih">
+    <div class="header-kartu">
+        <div class="judul-kiri">
+            <div class="garis-tegak"></div>
+            <h2>Visi Misi</h2>
+        </div>
+        <div class="tombol-aksi">
+            <span class="icon-hapus">🗑️</span>
+            <span class="icon-edit">✏️</span>
+        </div>
+    </div>
+    
+    <div class="box-abu-isi">
+        <strong>✨ Cara Pakai Mix & Match</strong>
+        <p>Ikuti langkah mudah ini untuk melihat gaya barumu:</p>
+        <ul>
+            <li>Klik satu gambar di bagian <b>Atasan</b>.</li>
+            <li>Klik satu gambar di bagian <b>Bawahan</b>.</li>
+            <li>Klik tombol <b>Mix</b> untuk menggabungkan!</li>
+        </ul>
+    </div>
+</div>
+
+<div class="kotak-putih-kecil">
+    <div class="judul-kiri">
+        <div class="garis-tegak"></div>
+        <h2>Product Gallery</h2>
+    </div>
+    <p class="teks-kecil">Rekomendasi foto yang disarankan beresolusi tinggi</p>
+
+    <div class="gallery-grid-admin">
+        <img src="../../image/foto/Gambar-cewe2-bajuhitam.jpg" alt="Produk" class="foto-item">
+        
+        <div class="upload-kotak-kecil">
+            <div class="icon-up">☁️</div>
+            <p>Klik disini untuk upload foto galery</p>
+        </div>
+    </div>
+</div>
+
+<button class="btn-simpan-semua">Simpan perubahan</button>
+ </div>
+</div>
+   
         
   
 
@@ -60,10 +93,6 @@
 
     
     
-      <div class="footer-bottom">
-        <p>Copyright &copy; JustifySvr2026</p>
-      </div>
-    </footer>
 
     <script src="../script.js"></script>
   </body>
