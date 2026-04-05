@@ -1,27 +1,31 @@
 // NAVBAR
 // Untuk burger menu
-function toggleMenu(){
-    const backdrop = document.getElementById("backdrop");
-    const overlay = document.getElementById("overlay");
-    const icon = document.getElementById("burger");
+function toggleMenu() {
+  const backdrop = document.getElementById("backdrop");
+  const overlay = document.getElementById("overlay");
+  const icon = document.getElementById("burger");
 
-    backdrop.classList.toggle("active");
-    overlay.classList.toggle("active");
+  backdrop.classList.toggle("active");
+  overlay.classList.toggle("active");
 
-    if (overlay.classList.contains("active")) {
-        icon.src = "image/icon/icon-close-putih.svg";
-    }
-    else {
-        icon.src = "image/icon/icon-burger.svg";
-    }
+  // Deteksi apakah kita di subfolder atau root
+  const isSubfolder = window.location.pathname.includes("/html/");
+  const basePath = isSubfolder ? "../image/icon/" : "image/icon/";
+
+  if (overlay.classList.contains("active")) {
+    icon.src = basePath + "icon-close-putih.svg";
+  }
+  else {
+    icon.src = basePath + "icon-burger.svg";
+  }
 }
 
 // AUTO ACTIVE LINK NAVBAR
 const link = document.querySelectorAll(".menu-desktop a, .menu-overlay a");
-link.forEach(link => {
-    if (link.href === window.location.href) {
-        link.classList.add("active");
-    }
+link.forEach(l => {
+  if (l.href === window.location.href) {
+    l.classList.add("active");
+  }
 });
 
 // mixmatch
