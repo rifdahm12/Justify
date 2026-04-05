@@ -1,235 +1,247 @@
-/* --- TAMPILAN DEFAULT (HP/MOBILE) --- */
-body {
-    margin: 0;
-    font-family: poppins; /* Pakai font standar biar aman */
-    background-color: #eeeeee;
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; }
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #eeeeee; 
+    overflow-x: hidden; }
+
+/* -Default mobile */
+.header-mobile { 
+    background: #000; 
+    width: 100%; 
+    display: block; 
 }
 
-.header-mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: #000;
-    color: #fff;
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 20px; 
 }
 
-.container-admin {
-    display: flex;
-    flex-direction: column; /* HP: Menu di atas, Isi di bawah */
+.logo img {
+    height: 30px; 
 }
 
-/* Menu Samping */
+.hamburger img { 
+    width: 25px; 
+    cursor: pointer; 
+}
+
+/* Menu sidebar */
 .menu-samping {
-    position:fixed;
-    background-color: #000000;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    box-sizing: border-box;
+    position: fixed; 
+    top: 0; 
+    left: -100%; 
+    width: 260px; 
+    height: 100vh;
+    background: #000; 
+    color: #fff; 
+    padding: 30px 20px;
+    display: flex; 
+    flex-direction: column; 
+    transition: 0.4s; 
+    z-index: 1000;
 }
 
-.footer-bottom {
-    margin-top: auto;
-    padding-top: 20px;
-    font-size: 15px;
-    color: #ffffff;
-    
+.menu-samping.tampil {
+     left: 0; 
 }
 
-.logo-area { text-align: center; margin-bottom: 20px; }
-.logo-area img { width: 70px; }
-
-.navigasi a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    margin-bottom: 5px;
+.logo-area {
+    text-align: center; 
+    margin-bottom: 30px; 
 }
 
-.navigasi a.aktif {
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.garis-pemisah { border-top: 1px solid #444; margin: 15px 0; }
-
-/* Isi Utama */
-.isi-utama { padding: 20px; }
-
-.header-karina {
-    display: flex;
-    flex-direction: column; /* HP: Judul di atas, Karina di bawahnya */
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.profil-box { 
-    display: flex; align-items: center; gap: 10px; 
-}
-.profil-box img { 
+.logo-area img {
     width: 40px; 
-    height: 40px; 
-    border-radius: 50%; }
+}
+
+.navigasi a { 
+    color: #fff; 
+    text-decoration: none; 
+    display: block; 
+    padding: 12px; 
+    margin-bottom: 5px; 
+}
+
+.navigasi a.aktif { 
+    background: #fff; 
+    color: #000; 
+    border-radius: 10px; 
+    font-weight: bold; 
+}
+
+.garis-pemisah {
+    border-top: 1px solid #333;
+    margin: 15px 0; 
+}
+
+.footer-sidebar { 
+    margin-top: auto;
+    text-align: center; 
+    font-size: 12px;
+    color: #666; 
+}
+
+/* Home */
+.isi-utama { 
+    padding: 20px; 
+}
+
+.header-karina { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    margin-bottom: 30px; 
+}
+
+.profil-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profil-box img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .nama-hitam {
-    background-color: black;
-    color: white;
+    background: #000;
+    color: #fff;
     padding: 5px 12px;
-    font-size: 12px;
     font-weight: bold;
+    font-size: 12px;
 }
 
-.sub-nama { 
-    display: block; 
-    font-size: 11px; 
-    color: #777; 
-    margin-top: 5px;
+.sub-nama {
+    font-size: 11px;
+    color: #777;
+    display: block;
+    margin-top: 4px;
 }
 
-/* Kotak Hero Banner */
-.kotak-putih {
-    background-color: white;
-    padding: 25px;
+/* Design Card */
+.card-putih {
+    background: #fff; 
+    padding: 25px; 
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px; 
 }
 
-.judul-kartu { display: flex; align-items: center; gap: 10px; }
-.garis-tegak { width: 4px; height: 20px; background-color: black; }
-
-.teks-kecil { font-size: 12px; color: #888; margin-left: 14px; }
-
-.area-upload {
-    background-color: #fafafa;
-    border: 1px dashed #ccc;
-    border-radius: 15px;
-    padding: 50px 10px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Container kartu putih kecil */
-.kotak-putih-kecil {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 25px;
-    border: 1px solid #eee; /* Biar ada garis tipis pemisah */
+.judul-kiri, .header-kartu { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
 }
 
 .header-kartu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+    justify-content: space-between; 
 }
 
-.judul-kiri {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.garis-tegak {
+    width: 5px; 
+    height: 22px; 
+    background: #000;
 }
 
-.tombol-aksi {
-    display: flex;
-    gap: 10px;
+.teks-kecil { 
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+    margin-bottom: 15px; 
 }
 
-.tombol-aksi span {
-    cursor: pointer;
-    background: #f5f5f5;
-    padding: 8px;
-    border-radius: 50%;
-    font-size: 14px;
-}
-
-/* Box abu-abu untuk isi teks */
-.box-abu-isi {
-    background-color: #e9e9e9;
-    padding: 20px;
-    border-radius: 12px;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.box-abu-isi ul { margin-top: 10px; padding-left: 20px; }
-
-/* Grid Gallery Admin */
-.gallery-grid-admin {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.foto-item {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.upload-kotak-kecil {
-    height: 180px;
-    background-color: #f0f0f0;
-    border: 1px dashed #ccc;
+/* upload  */
+.area-upload-lebar, .upload-kotak-kecil {
+    background: #fafafa;
+    border: 1px #ccc;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 11px;
-    padding: 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+.area-upload-lebar {
+    padding: 50px 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+}
+
+.foto-gallery, .upload-kotak-kecil { 
+    height: 180px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.box-abu-isi {
+    background: #e9e9e9;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.icon-btn img {
+    width: 35px;
     cursor: pointer;
 }
 
-/* Tombol Simpan di Tengah Bawah */
-.btn-simpan-semua {
+.btn-simpan {
     display: block;
-    margin: 40px auto 20px auto;
-    background-color: black;
-    color: white;
-    padding: 12px 40px;
+    margin: 40px auto;
+    background: #000;
+    color: #fff;
+    padding: 12px 50px;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.btn-simpan-semua:hover {
-    transform: scale(1.05);
+.tombol-aksi {
+    display: flex;
+    gap: 25px;
 }
 
-/* Responsive untuk dekstop*/
+/* Ukuran Dekstop */
 @media screen and (min-width: 768px) {
+    .header-mobile { 
+        display: none; 
+    }
+
     .container-admin {
-        flex-direction: row; 
+        display: flex; 
     }
 
     .menu-samping {
-        width: 250px;
-        min-height: 100vh;
         position: sticky;
-        top: 0;
+        left: 0;
+        min-width: 260px;
     }
 
     .isi-utama {
         flex: 1;
-        background-color: white;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        padding: 40px 60px;
     }
 
-    .header-karina {
-        flex-direction: row; 
+    .header-karina {flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 }

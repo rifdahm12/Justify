@@ -8,104 +8,109 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../../css/adminCSS/homeAdmin.css">
   </head>
-
   <body>
     <header class="header-mobile">
-            <nav class="navbar">
         <div class="nav-container">
-          <div class="logo">
-            <img
-              src="../../image/Logo-Putih-Savior-World.png"
-              alt="Savior World Logo White"
-            />
-          </div>
-      <!-- MENU MOBILE -->
-                    <div class="hamburger" onclick="toggleMenu()">
-                        <img id="burger" src="../../image/icon/icon-burger.svg" alt="Open Menu">
-                    </div>
-
+            <div class="logo">
+                <img src="../../image/Logo-Putih-Savior-World.png" alt="Logo">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <img src="../../image/icon/icon-burger.svg" alt="Menu">
+            </div>
+        </div>
     </header>
 
-    <div class="isi-utama">
-        <div class="header-karina">
-            <h4>HOME</h4>
-            <div class="profil-box">
-                <img src="../../image/foto/Gambar-cewe-depan-bajucoklat.jpg" alt="Karina">
-                <div class="tulisan-profil">
-                    <span class="nama-hitam">KARINA FAUZIA SETIADI</span>
-                    <span class="sub-nama">Penyelenggara Dunia</span>
+    <div class="container-admin">
+        
+        <div class="menu-samping" id="sidebarMenu">
+            <div class="logo-area">
+                <img src="../../image/Logo-Putih-Savior-World.png" alt="Logo">
+            </div>
+            
+            <div class="navigasi">
+                <a href="#">Profile</a>
+                <a href="#">Dashboard</a>
+                <a href="#" class="aktif">Manage Home</a>
+                <a href="#">Manage Katalog</a>
+                <a href="#">Manage Mixmatch</a>
+                <div class="garis-pemisah"></div>
+                <a href="#">Keluar</a>
+            </div>
+
+            <div class="footer-sidebar">
+                <p>&copy; 2026 Savior World</p>
+            </div>
+        </div>
+
+        <main class="isi-utama">
+            
+            <div class="header-karina">
+                <h4>HOME</h4>
+                <div class="profil-box">
+                    <img src="../../image/foto/Gambar-cewe-depan-bajucoklat.jpg" alt="Karina">
+                    <div class="tulisan-profil">
+                        <span class="nama-hitam">KARINA FAUZIA SETIADI</span>
+                        <span class="sub-nama">Penyelenggara Dunia</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="kotak-putih">
-            <div class="judul-kartu">
-                <div class="garis-tegak"></div>
-                <h2>Hero Banner</h2>
+            <div class="card-putih">
+                <div class="judul-kiri">
+                    <div class="garis-tegak"></div>
+                    <h2>Hero Banner</h2>
+                </div>
+                <p class="teks-kecil">Rekomendasi foto yang disarankan beresolusi tinggi</p>
+                <div class="area-upload-lebar">
+                    <div class="icon-awan">☁️</div>
+                    <p>Klik disini untuk upload foto hero banner</p>
+                </div>
             </div>
-            <p class="teks-kecil">Rekomendasi foto yang disarankan beresolusi tinggi</p>
 
-            <div class="area-upload">
-                <div class="icon-awan">☁️</div>
-                <p>Klik disini untuk upload foto hero banner</p>
+            <div class="card-putih">
+                <div class="header-kartu">
+                    <div class="judul-kiri">
+                        <div class="garis-tegak"></div>
+                        <h2>Visi Misi</h2>
+                    </div>
+                    <div class="tombol-aksi">
+                        <span class="icon-btn hapus"><img src="../../image/icon/Delete.svg"></span>
+                        <span class="icon-btn edit"><img src="../../image/icon/Pen.svg"></span>
+                    </div>
+                </div>
+                <div class="box-abu-isi">
+                    <ul>
+                        <li>Drop fit yang relate sama lifestyle Gen Z</li>
+                        <li>Bikin styling jadi fun lewat mix & match</li>
+                        <li>Stay ahead tapi gak kehilangan identitas</li>
+                        <li>Support self-expression tanpa batas</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-<div class="kotak-putih">
-    <div class="header-kartu">
-        <div class="judul-kiri">
-            <div class="garis-tegak"></div>
-            <h2>Visi Misi</h2>
-        </div>
-        <div class="tombol-aksi">
-            <span class="icon-hapus">
-              <img src="../../image/icon/Delete.svg" />
-            </span>
-            <span class="icon-edit">
-              <img src="../../image/icon/Pen.svg" />
-            </span>
-        </div>
+
+            <div class="card-putih">
+                <div class="judul-kiri">
+                    <div class="garis-tegak"></div>
+                    <h2>Product Gallery</h2>
+                </div>
+                <p class="teks-kecil">Rekomendasi foto yang disarankan beresolusi tinggi</p>
+                <div class="gallery-grid">
+                    <img src="../../image/foto/Gambar-cewe2-bajuhitam.jpg" class="foto-gallery">
+                    <div class="upload-kotak-kecil">
+                        <div class="icon-awan">☁️</div>
+                        <p>Klik disini untuk upload foto galery</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-simpan">Simpan perubahan</button>
+        </main>
     </div>
-    
-    <div class="box-abu-isi">
-        <strong>✨ Cara Pakai Mix & Match</strong>
-        <p>Ikuti langkah mudah ini untuk melihat gaya barumu:</p>
-        <ul>
-            <li>Klik satu gambar di bagian <b>Atasan</b>.</li>
-            <li>Klik satu gambar di bagian <b>Bawahan</b>.</li>
-            <li>Klik tombol <b>Mix</b> untuk menggabungkan!</li>
-        </ul>
-    </div>
-</div>
 
-<div class="kotak-putih-kecil">
-    <div class="judul-kiri">
-        <div class="garis-tegak"></div>
-        <h2>Product Gallery</h2>
-    </div>
-    <p class="teks-kecil">Rekomendasi foto yang disarankan beresolusi tinggi</p>
-
-    <div class="gallery-grid-admin">
-        <img src="../../image/foto/Gambar-cewe2-bajuhitam.jpg" alt="Produk" class="foto-item">
-        
-        <div class="upload-kotak-kecil">
-            <div class="icon-up">☁️</div>
-            <p>Klik disini untuk upload foto galery</p>
-        </div>
-    </div>
-</div>
-
-<button class="btn-simpan-semua">Simpan perubahan</button>
- </div>
-</div>
-   
-        
-  
-
-             
-
-    
-    
-
-    <script src="../script.js"></script>
-  </body>
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebarMenu').classList.toggle('tampil');
+        }
+    </script>
+</body>
 </html>
