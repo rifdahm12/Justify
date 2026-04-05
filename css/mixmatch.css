@@ -41,14 +41,14 @@ h4 {
     transition: all 0.3s ease;
 }
 
-/* EFEK STROKE HITAM SAAT DIKLIK */
-.item-choice.terpilih {
+/* Efek stroke hitam saat diklik */
+.item-choice.active {
     border: 2px solid black !important;
     transform: scale(1.08); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* AREA HASIL (VERTIKAL) */
+/* Area hasil menjadi vertikal */
 .result-area {
     display: none;
     text-align: center;

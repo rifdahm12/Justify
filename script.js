@@ -33,14 +33,14 @@ function pilihItem(elemen, kategori) {
   const semuaPilihan = document.querySelectorAll("." + kategori);
 
   // Ini penting supaya kalau user ganti pilihan, garis di baju sebelumnya hilang
-  //  Hapus class 'terpilih' dari SEMUA gambar di kategori tersebut
+  //  Hapus class 'active' dari SEMUA gambar di kategori tersebut
   semuaPilihan.forEach((img) => {
-    img.classList.remove("terpilih");
+    img.classList.remove("active");
   });
   // Tambahkan class 'terpilih' HANYA pada gambar yang baru saja diklik
-  elemen.classList.add("terpilih");
+  elemen.classList.add("active");
 
-  // 4. Simpan alamat gambarnya untuk proses Mix nanti
+  // Simpan alamat gambarnya untuk proses Mix nanti
   if (kategori === "atasan") {
     pilihanatasan = elemen.src;
   } else {
@@ -48,7 +48,7 @@ function pilihItem(elemen, kategori) {
   }
 }
 
-// 3. FUNGSI GABUNGKAN (TOMBOL MIX)
+// Fungsi tombol mix
 function gabungkanStyle() {
   if (pilihanatasan === "" || pilihanbawahan === "") {
     alert("Pilih dulu atasan dan bawahannya!");
@@ -58,7 +58,7 @@ function gabungkanStyle() {
   const areaHasil = document.getElementById("result-display");
   const kotakGambar = document.getElementById("combined-preview");
 
-  // Masukkan gambar ke dalam kotak yang sudah di-setting vertikal di CSS
+  // Innsert gambar ke dalam kotak yang sudah di-setting vertikal di mixmatch.CSS
   kotakGambar.innerHTML = `
         <img src="${pilihanatasan}" alt="Atasan Terpilih">
         <img src="${pilihanbawahan}" alt="Bawahan Terpilih">
@@ -66,10 +66,11 @@ function gabungkanStyle() {
 
   areaHasil.style.display = "block";
 
-  // Scroll otomatis ke hasil agar user tidak bingung
+  // Scroll otomatis ke hasil mixmatch
   areaHasil.scrollIntoView({ behavior: "smooth" });
 }
 
+//katalog
 const cards = document.querySelectorAll(".products .card");
 const details = document.getElementById("overlay-details");
 const closeBtn = document.getElementById("closeBtn");
