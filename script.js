@@ -28,18 +28,16 @@ link.forEach(link => {
 let pilihanatasan = "";
 let pilihanbawahan = "";
 
-// 2. FUNGSI MEMILIH GAMBAR
 function pilihItem(elemen, kategori) {
-  // 1. Cari semua gambar dalam kategori yang sama (atasan atau bawahan)
+  // Semua gambar dalam kategori yang sama (atasan atau bawahan)
   const semuaPilihan = document.querySelectorAll("." + kategori);
 
-  // 2. Hapus class 'terpilih' dari SEMUA gambar di kategori tersebut
   // Ini penting supaya kalau user ganti pilihan, garis di baju sebelumnya hilang
+  //  Hapus class 'terpilih' dari SEMUA gambar di kategori tersebut
   semuaPilihan.forEach((img) => {
     img.classList.remove("terpilih");
   });
-
-  // 3. Tambahkan class 'terpilih' HANYA pada gambar yang baru saja diklik
+  // Tambahkan class 'terpilih' HANYA pada gambar yang baru saja diklik
   elemen.classList.add("terpilih");
 
   // 4. Simpan alamat gambarnya untuk proses Mix nanti
