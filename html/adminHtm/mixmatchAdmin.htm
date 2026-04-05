@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savior World</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../../css/adminCSS/mixmatchAdmin.css">
+  </head>
+  <body>
+    <header class="header-mobile">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../../image/Logo-Putih-Savior-World.png" alt="Logo">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <img src="../../image/icon/icon-burger.svg" alt="Menu">
+            </div>
+        </div>
+    </header>
+
+    <div class="container-admin">
+        
+        <div class="menu-samping" id="sidebarMenu">
+            <div class="logo-area">
+                <img src="../../image/Logo-Putih-Savior-World.png" alt="Logo">
+            </div>
+            
+            <div class="navigasi">
+                <a href="#">Profile</a>
+                <a href="#">Dashboard</a>
+                <a href="homeAdmin.htm">Manage Home</a>
+                <a href="catalogAdmin.htm">Manage Katalog</a>
+                <a href="mixmatchAdmin.htm" class="aktif">Manage Mixmatch</a>
+                <div class="garis-pemisah"></div>
+                <a href="#">Keluar</a>
+            </div>
+
+            <div class="footer-sidebar">
+                <p>&copy; 2026 Savior World</p>
+            </div>
+        </div>
+
+        <main class="isi-utama">
+            
+            <div class="header-karina">
+                <h4>MIXMATCH</h4>
+                <div class="profil-box">
+                    <img src="../../image/foto/Gambar-cewe-depan-bajucoklat.jpg" alt="Karina">
+                    <div class="tulisan-profil">
+                        <span class="nama-hitam">KARINA FAUZIA SETIADI</span>
+                        <span class="sub-nama">Penyelenggara Dunia</span>
+                    </div>
+                </div>
+            </div>
+
+          
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebarMenu').classList.toggle('tampil');
+        }
+    </script>
+</body>
+</html>
