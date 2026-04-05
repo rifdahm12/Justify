@@ -113,3 +113,22 @@
     margin-left: 20px;
 }
 
+/* UPLOAD ZONE */
+.upload-zone {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAMklEQVQ4T2M8c+bMfwY0wMhIg8XExMTwn4GB8f///wyM9LMMjKMaRhqGAX00fEAnjAIA2fMv9beD50kAAAAASUVORK5CYII='); /* Pola catur sederhana */
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 60px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.upload-label {
+    cursor: pointer;
+    display: block;
+}
+
+.upload-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
