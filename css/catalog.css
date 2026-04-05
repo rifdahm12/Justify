@@ -40,7 +40,6 @@ main{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 30px;
 }
 
 .size-list span {
@@ -107,16 +106,18 @@ main{
   display: none;
   justify-content: center;
   align-items: center;
+  padding-top:20px;
+  overflow-y: auto;
 }
 
 .modal {
   background: white;
   max-width: 366px;
-  max-height: 80vh;
+  max-height: 85vh;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  margin: 0 40px;
+  margin: 20px;
 }
 
 .modal-header {
