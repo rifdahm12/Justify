@@ -33,17 +33,14 @@ let pilihanatasan = "";
 let pilihanbawahan = "";
 
 function pilihItem(elemen, kategori) {
-  // Semua gambar dalam kategori yang sama (atasan atau bawahan)
   const semuaPilihan = document.querySelectorAll("." + kategori);
-
-  // Ini penting supaya kalau user ganti pilihan, garis di baju sebelumnya hilang
-  //  Hapus class 'active' dari SEMUA gambar di kategori tersebut
+  // Ketika user ganti pilihan stroke di baju sebelumnya hilang .
+  // Hapus class 'active' dari semua gambar yang sebelumnya dikllik
   semuaPilihan.forEach((img) => {
     img.classList.remove("active");
   });
-  // Tambahkan class 'terpilih' HANYA pada gambar yang baru saja diklik
+  // Tambahkan class 'active' pada satu gambar yang baru saja diklik
   elemen.classList.add("active");
-
   // Simpan alamat gambarnya untuk proses Mix nanti
   if (kategori === "atasan") {
     pilihanatasan = elemen.src;
@@ -55,21 +52,18 @@ function pilihItem(elemen, kategori) {
 // Fungsi tombol mix
 function gabungkanStyle() {
   if (pilihanatasan === "" || pilihanbawahan === "") {
-    alert("Pilih dulu atasan dan bawahannya!");
+    alert("Pilih dulu atasan dan bawahannya, Ya!");
     return;
   }
 
   const areaHasil = document.getElementById("result-display");
   const kotakGambar = document.getElementById("combined-preview");
-
   // Innsert gambar ke dalam kotak yang sudah di-setting vertikal di mixmatch.CSS
   kotakGambar.innerHTML = `
         <img src="${pilihanatasan}" alt="Atasan Terpilih">
         <img src="${pilihanbawahan}" alt="Bawahan Terpilih">
     `;
-
   areaHasil.style.display = "block";
-
   // Scroll otomatis ke hasil mixmatch
   areaHasil.scrollIntoView({ behavior: "smooth" });
 }
